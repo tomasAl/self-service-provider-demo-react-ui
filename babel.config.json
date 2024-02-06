@@ -1,7 +1,7 @@
 /*
  * @MICROFRONTEND
  *
- * Bazinė privaloma Babel kinfigūracija, ypač svarbios
+ * Bazinė privaloma Babel konfigūracija, ypač svarbios
  * dalus: "@babel/plugin-transform-runtime" bei
  * `"useESModules": true`.
  */
