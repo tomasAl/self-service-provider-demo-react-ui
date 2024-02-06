@@ -28,4 +28,9 @@ const lifecycles = singleSpaReact({
   },
 });
 
+/*
+ * @MICROFRONTEND
+ *
+ * single-spa pateikiami lifecycle hook'ai.
+ */
 export const { bootstrap, mount, unmount } = lifecycles;
