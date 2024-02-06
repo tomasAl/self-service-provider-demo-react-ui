@@ -1,8 +1,28 @@
+/*
+ * @MICROFRONTEND
+ *
+ * React import'as single-spa kontekste yra privalomas
+ * visuose komponentuose, nepriklausomai nuo to ar jis yra naudojamas.
+ */
 import React, { useState } from 'react';
 import { Typography, Grid, Button, Box, Collapse, CardContent } from '@mui/material';
+
+/*
+ * @MICROFRONTEND
+ *
+ * @rc-ses aplinkos teikiamo funkcionalumo import'ai apibrėžti
+ * src/@types. Vėliau vietoje tokio formato jie bus pateikiami
+ * kaip npm biblioteka.
+ */
 import { User, getUser } from '@rc-ses/self-service-portal-ui';
 
 function UserDetailsSection() {
+  /*
+   * @MICROFRONTEND
+   *
+   * `getUser` metodo kvietimas, bei User tipas, kuriuos eksportuoja
+   * single-spa modulis @rc-ses/self-service-portal-ui
+   */
   const user: User = getUser();
 
   const [displayUserDetails, setDisplayUserDetails] = useState<boolean>(false);

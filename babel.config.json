@@ -1,3 +1,10 @@
+/*
+ * @MICROFRONTEND
+ *
+ * Bazinė privaloma Babel kinfigūracija, ypač svarbios
+ * dalus: "@babel/plugin-transform-runtime" bei
+ * `"useESModules": true`.
+ */
 {
   "presets": [
     "@babel/preset-env",
