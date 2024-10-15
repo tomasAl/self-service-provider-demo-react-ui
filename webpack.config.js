@@ -29,6 +29,26 @@ module.exports = (webpackConfigEnv, argv) => {
   });
 
   return merge(defaultConfig, {
-    externals: /^@rc-ses\/.+/,
+    externals: [
+      /^@rc-ses\/.+/,
+      "react",
+      "react-dom"
+    ],
+    module: {
+      rules: [
+        {
+          test: /\.m?js/,
+          resolve: {
+            fullySpecified: false,
+          },
+        },
+      ],
+    },
+    watchOptions: {
+      // for some systems, watching many files can result in a lot of CPU or memory usage
+      // https://webpack.js.org/configuration/watch/#watchoptionsignored
+      // don't use this pattern, if you have a monorepo with linked packages
+      ignored: /node_modules/,
+    }
   });
 };
