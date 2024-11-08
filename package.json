@@ -1,6 +1,6 @@
 {
   "name": "@rc-ses/self-service-provider-demo-react-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "author": "CGI",
   "repository": {
@@ -19,7 +19,7 @@
     "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "coverage": "cross-env BABEL_ENV=test jest --coverage",
 
-    "rc-ses-components:purge": "rimraf -r ./node_modules/.vite/deps && rimraf -r ./node_modules/@registrucentras",
+    "rc-ses-components:purge": "rimraf -r ./node_modules/.vite/deps && rimraf -r ./node_modules/@registrucentras && rimraf -r ./node_modules/.package-lock.json",
     "rc-ses-components:install": "npm run rc-ses-components:purge && npm i --install-links"
   },
   "dependencies": {
@@ -29,7 +29,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "5.16.7",
     "@mui/system": "5.16.7",
-    "@registrucentras/rc-ses-react-components": "github:registrucentras/rc-ses-react-components#v0.0.23",
+    "@registrucentras/rc-ses-react-components": "github:registrucentras/rc-ses-react-components#v0.0.28",
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/node": "^20.10.6",
     "axios": "^1.6.3",
