@@ -5,20 +5,20 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles'
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import theme from './theme';
 import Service from './components/Service';
+import { getServiceFormBaseUrl } from '@rc-ses/mfe-host';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Service />}>
-      <Route path='00000000-0000-0000-0000-000000000000' element={<Service />} />
-      <Route path='00000000-0000-0000-0000-000000000001' element={<Service />} />
+      <Route path='09eec1a3-0674-479b-85fe-b9140879de7b' element={<Service />} />
+      <Route path='77ca7f18-07d3-4f4a-8da7-758e4fa7aee1' element={<Service />} />
     </Route>
   ),
-  { basename: '/paslaugos/uzsakymas' },
+  { basename: getServiceFormBaseUrl() },
 );
 
 export default function App() {

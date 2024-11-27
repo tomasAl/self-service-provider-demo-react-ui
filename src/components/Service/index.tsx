@@ -1,11 +1,9 @@
 import React from 'react'
-import { Typography } from '@mui/material'
 
 import {
   RcSesAccordion,
   RcSesServiceFormActions,
   RcSesServiceFormContainer,
-  RcSesServiceHeader,
   RcSesServicePage,
   useAccordionController
 } from '@registrucentras/rc-ses-react-components'
@@ -15,7 +13,8 @@ import ServiceDetailsForm from './components/ServiceDetailsForm'
 import ServiceIssuanceForm from './components/ServiceIssuanceForm'
 import AdditionalServicesForm from './components/AdditionalServicesForm'
 import TermsAndConditionsForm from './components/TermsAndConditionsForm'
-import { redirectToSelfServiceDashboard, redirectToServiceDescriptionPage } from '@rc-ses/self-service-portal-ui-root'
+import { redirectToSelfServiceDashboard, redirectToServiceDescriptionPage } from '@rc-ses/mfe-host'
+import { getLanguage } from '@rc-ses/mfe-navigation'
 
 function Service() {
   const accordionController = useAccordionController({
@@ -50,23 +49,6 @@ function Service() {
 
   return (
     <RcSesServicePage>
-      <RcSesServiceHeader
-        breadcrumbsProps={{
-          path: [
-            { label: 'Pagrindinis', path: '/' },
-            { label: 'Formos su vedliu pavyzdys', path: '/' },
-          ],
-        }}
-        title='Nekilnojamojo turto registro išrašas pagal nurodytą turto adresą'
-      >
-        <Typography variant='body1'>
-          Šiame puslapyje Jūs galite užsisakyti Nekilnojamojo turto registro išrašus,
-          pažymas bei kitus dokumentus. Užsakytą NTR išrašą, pažymą ar kitą dokumentą
-          galėsite gauti elektroniniu būdu arba atsiimti pasirinktame VĮ Registrų centro
-          padalinyje.
-        </Typography>
-      </RcSesServiceHeader>
-
       <RcSesServiceFormContainer accordionController={accordionController} showProgressStepper>
         <RcSesAccordion id='basicInformation' controller={accordionController}>
           <BasicInformationForm />

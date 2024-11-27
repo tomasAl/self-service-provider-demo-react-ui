@@ -1,4 +1,4 @@
-import type {} from '@emotion/styled'
+// import type {} from '@emotion/styled'
 import { createTheme } from '@mui/material'
 import { RcSesTheme } from '@registrucentras/rc-ses-react-components'
 
