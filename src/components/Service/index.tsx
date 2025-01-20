@@ -14,7 +14,6 @@ import ServiceIssuanceForm from './components/ServiceIssuanceForm'
 import AdditionalServicesForm from './components/AdditionalServicesForm'
 import TermsAndConditionsForm from './components/TermsAndConditionsForm'
 import { redirectToSelfServiceDashboard, redirectToServiceDescriptionPage } from '@rc-ses/mfe-host'
-import { getLanguage } from '@rc-ses/mfe-navigation'
 
 function Service() {
   const accordionController = useAccordionController({
