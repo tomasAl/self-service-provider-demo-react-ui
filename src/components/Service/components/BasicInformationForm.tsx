@@ -5,16 +5,22 @@ import { RcSesTextField } from '@registrucentras/rc-ses-react-components'
 function BasicInformationForm() {
   return (
     <RcSesTextField
-      value={getToken()}
       label='JWT'
-      multiline
       slotProps={{
         field: {
-          readOnly: true,
-          rows: 10,
-          sx: { minHeight: '200px' },
+          InputProps:{
+            inputComponent: 'textarea',
+            inputProps: {
+              rows: 10,
+              sx: { minHeight: '200px' },
+            }
+          },
+          slots: {
+            input: 'textarea'
+          },
         },
       }}
+      value={getToken()}
     />
   )
 }
